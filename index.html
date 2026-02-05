@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Field Dry Density – Sand Replacement</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h2>Field Dry Density (Sand Replacement Method)</h2>
+
+<section>
+<h3>Global Constants</h3>
+<label>Bulk Density of Sand (γs): <input id="gamma" value="1.420"></label>
+<label>Sand in Cone (Wc): <input id="wc" value="1028"></label>
+<label>Specific Gravity (Gs): <input id="gs" value="2.580"></label>
+<label>MDD: <input id="mdd" value="2.301"></label>
+</section>
+
+<table id="data">
+<thead>
+<tr>
+<th>Test</th><th>w1</th><th>w2</th><th>w3</th><th>w4</th><th>MC%</th><th>Dry Density</th><th>Compaction%</th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+<button onclick="addRow()">Add Test</button>
+
+<script src="app.js"></script>
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js');
+}
+</script>
+</body>
+</html>
